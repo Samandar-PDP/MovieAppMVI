@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.digital.movieappmvi.presentation.main.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="uz.digital.movieappmvi.presentation.movie_list.MovieFragment"
+        android:label="MovieFragment" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="uz.digital.movieappmvi.presentation.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="uz.digital.movieappmvi.presentation.search.SearchFragment"
+        android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="uz.digital.movieappmvi.presentation.detail.DetailFragment"
+        android:label="DetailFragment" />
+</navigation>
