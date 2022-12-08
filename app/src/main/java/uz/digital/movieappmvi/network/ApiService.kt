@@ -18,5 +18,5 @@ interface ApiService {
         @Query("api_key") api_key: String = Constants.API_KEY,
         @Query("query") query: String,
         @Query("page") page: Int = 1
-    )
+    ): Response<Movie>
 }

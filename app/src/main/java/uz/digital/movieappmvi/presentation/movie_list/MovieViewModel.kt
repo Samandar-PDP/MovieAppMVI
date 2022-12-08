@@ -9,10 +9,10 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.launch
 import uz.digital.movieappmvi.network.RetrofitInstance
-import uz.digital.movieappmvi.repository.MovieRepository
+import uz.digital.movieappmvi.repository.RemoteRepository
 
 class MovieViewModel: ViewModel() {
-    private val repository = MovieRepository(RetrofitInstance.getApiService())
+    private val repository = RemoteRepository(RetrofitInstance.getApiService())
 
     private val _state: MutableStateFlow<MainState> = MutableStateFlow(MainState.Init)
     val state: StateFlow<MainState> get() = _state

@@ -2,7 +2,7 @@ package uz.digital.movieappmvi.repository
 
 import uz.digital.movieappmvi.network.ApiService
 
-class MovieRepository(
+class RemoteRepository(
     private val apiService: ApiService
 ) {
     suspend fun getMovies() = apiService.getMovies()
